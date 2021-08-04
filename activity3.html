@@ -1,0 +1,129 @@
+<html>
+  <head>
+	  
+	  
+	     <meta charset="utf-8">
+    <title>Panorama</title>
+    <title>ARbook; Image</title>
+    <meta name="description" content="ARbook">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style type="text/css">
+  body,td,th {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: 20px; 
+	
+}
+	  
+body {
+	background-color: #FFD701;
+	
+} 
+	  .text1{word-spacing:8px;}
+	  
+  </style>
+	  
+	  
+	  
+	  
+	  
+	  <style>
+	  .par {
+   /* color: blue; */
+		  
+}
+
+		  	  .par::before {
+   /* content: "nono"; 
+				  page-break-before: always; */
+}
+
+		  
+		  
+	  </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.3.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+			var clickedA1 = false;
+			var clickedA2 = false;
+			
+			var A1 = "id_54";
+			var A2 = "id_106";
+			
+        var counter = 0;
+            var words = $("p:first").text().split(" ");
+            var text = words.join("</span> <span>");
+            $("p:first").html("<span>" + text + "</span>");
+			
+			
+			
+			$("span").each(function(){
+    var $span = $(this);
+
+ 
+
+    var spanTxt = $span.text();
+				counter++;
+				//alert(spanTxt);
+				$span.attr('id', "id_"+counter);
+			
+    // do something with the above
+});
+			
+			
+			
+            $("span").click(function () {
+             // $(this).css("background-color","yellow");
+				$(this).addClass("par");
+				
+				var newbit = ($(this).html());
+				newbit = "<br><br>" + newbit;
+				$(this).html(newbit);
+				//alert($(this).attr('id'));
+				
+				if($(this).attr('id') == A1){clickedA1=true};
+				if($(this).attr('id') == A2){clickedA2=true};
+				
+				
+				if(clickedA1 && clickedA2 ){
+					
+					alert("all correct");{window.location.href = "End new3-1.html";
+document;
+		}
+					
+				}
+				
+            });
+
+        }); 
+    </script>
+
+  </head>
+  <body>
+	  
+	 
+  <h4><strong><div align="center"> <div style="border-width: 2px; border-style:solid ; width: 140px; height: 25px; border-color: rgb(41, 36, 33); padding: 5px; text-align: center;">Activity target:</div></div></strong></h4>
+  <h5><em><div align="center">Cut the following words correctly.</div></em></h5>
+	  
+    <body><h5><div align="center">
+      Require:<br>
+	
+  Read the essay, break the text into three paragraphs.<br>
+You can click each word, <br>but just choose the word where you think is a new paragraph.<br>（<a href="javascript:location.reload();">Choose wrong? Tap here to restart the game</a>)</div></h5>
+   
+          
+		<body><h6><p class="text1">You’ll notice that the dash replicates much of the work of a colon or semicolon. It’s 
+more informal than either a colon or semicolon, but if you overuse it your writing 
+can go downhill fast: Soon your work looks like one big interruption. Avoid the 
+dash when writing scholarly work; it’s too informal. Remember: Within grammar’s sacred bounds, punctuation is often a matter of 
+personal preference. You might develop a love for semicolons. Or you might begin 
+to rely heavily on commas or dashes—it just depends on how you speak naturally 
+and how much of your natural cadence you want to portray in your writing. An added note about exclamation marks: Avoid them. When I was very young 
+I once sent a famous designer an excited thank you note, which he returned to me 
+with all the exclamation marks encircled in red. A cruel response, but effective. </p></h6>
+			<h6><div align="center">(*If you break the text correctly, <br>the page will jump to the other page automaticlly, <br>if the page don't jump, please try to cut the text again.)</div></h6>
+			
+                 
+		
+		
+    </body></body>
+</html>
